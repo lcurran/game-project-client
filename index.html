@@ -21,13 +21,11 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Sign in</a></li>
             <li><a href="#">Sign Up</a></li>
->>>>>>> API
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
 <!--      temp forms       -->
-<body class="container-fluid">
       <form id="sign-up">
         <fieldset>
           <legend>Sign up!</legend>
@@ -63,38 +61,35 @@
 
     <h1>Cavemen vs. Aliens</h1>
     <div class="grid">
-      <div class="cell">X</div>
-      <div class="cell">O</div>
-      <div class="cell">X</div>
-      <div class="cell">O</div>
-      <div class="cell">5</div>
-      <div class="cell">6</div>
-      <div class="cell">7</div>
-      <div class="cell">8</div>
-      <div class="cell">9</div>
+      <div id="cell0" class="cell">X</div>
+      <div id="cell1" class="cell">O</div>
+      <div id="cell2" class="cell">X</div>
+      <div id="cell3" class="cell">O</div>
+      <div id="cell4" class="cell">5</div>
+      <div id="cell5" class="cell">6</div>
+      <div id="cell6" class="cell">7</div>
+      <div id="cell7" class="cell">8</div>
+      <div id="cell8" class="cell">9</div>
     </div>
 
-
-<!-- begin collapse forms -->
-    <div class="collapse collapse-class col-xs-6" role="form" id="login-form">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="email">
-        <input type="password" class="form-control" placeholder="password">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">Log in</button>
-        </span>
+<!-- begin modal section -->
+    <div id="occupied-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="invalidSpaceError">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Oh no!</h4>
+          </div>
+          <div class="modal-body">
+            <p>That land has already been claimed by the enemy!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
       </div>
-    </div><!-- /input-group -->
-    <div class="collapse collapse-class col-xs-6" role="form" id="signup-form">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="email">
-        <input type="password" class="form-control" placeholder="password">
-        <input type="password" class="form-control" placeholder="confirm password">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">Sign up</button>
-        </span>
-      </div>
-    </div><!-- /input-group -->
+    </div>
 
+<!-- end modal section -->
   </body>
 </html>
