@@ -13,7 +13,7 @@ The object returned can be used to validate the form data.
 'use strict';
 
 const ajaxDefaults = {
-  url: 'http://localhost:3000',
+  url: 'http://tic-tac-toe.wdibos.com/',
 };
 
 const myRequest = (data, success, fail) => {
@@ -60,6 +60,6 @@ $(() => {
     let data = getFormFields(this);
     e.preventDefault();
     api.myRequest(data, ui.success, ui.failure);
-  });  
+  });
 });
 ```

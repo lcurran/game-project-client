@@ -13,7 +13,7 @@ const onSignUp = function (event) {
   .fail(ui.failure);
 };
 
-const onLogIn = function (event) {
+const onSignIn = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
   api.signIn(data)
@@ -37,8 +37,8 @@ const onChangePassword = (event) => {
 }
 
 const addHandlers = () => {
-  $('#signup').on('click', onSignUp);
-  $('#login').on('click', onLogIn);
+  $('#sign-up').on('submit', onSignUp);
+  $('#sign-in').on('submit', onSignIn);
   $('#sign-out').on('submit', onSignOut);
   $('#change-password').on('submit', onChangePassword);
 };
