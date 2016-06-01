@@ -19,8 +19,8 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Log in</a></li>
-            <li><a href="#">Sign Up</a></li>
+            <li><a id="login" href="#">Log in</a></li>
+            <li><a id="signup" href="#">Sign up</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -37,5 +37,28 @@
       <div class="cell">8</div>
       <div class="cell">9</div>
     </div>
+
+
+<!-- begin collapse forms -->
+    <div class="collapse collapse-class col-xs-6" role="form" id="login-form">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="email">
+        <input type="password" class="form-control" placeholder="password">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Log in</button>
+        </span>
+      </div>
+    </div><!-- /input-group -->
+    <div class="collapse collapse-class col-xs-6" role="form" id="signup-form">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="email">
+        <input type="password" class="form-control" placeholder="password">
+        <input type="password" class="form-control" placeholder="confirm password">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Sign up</button>
+        </span>
+      </div>
+    </div><!-- /input-group -->
+
   </body>
 </html>
