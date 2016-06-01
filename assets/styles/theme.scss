@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+}
+
+// not working rn :C
+.navbar-custom {
+  background-color: $darker-white;
+  text-align: right;
+  width: 100%;
+  li a {
+    color: $carbon-black;
+  }
+  li a:hover {
+    background-color: $carbon-black;
+    color: $alien-green;
+  }
+}
+
+.cell {
+  border: 1px solid $carbon-black;
+}

@@ -1,0 +1,29 @@
+body {
+  box-sizing: border-box;
+}
+
+
+body,
+html {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  margin: 0;
+  width: 100%;
+}
+
+.grid {
+  @include make-row();
+  margin: auto;
+  margin-top: 10vh;
+  max-width: 450px;
+  @extend .container;
+
+  .cell {
+    @include make-xs-column(4);
+    min-height: 140px;
+  }
+}
