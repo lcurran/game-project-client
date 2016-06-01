@@ -19,12 +19,48 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a id="login" href="#">Log in</a></li>
-            <li><a id="signup" href="#">Sign up</a></li>
+            <li><a href="#">Sign in</a></li>
+            <li><a href="#">Sign Up</a></li>
+>>>>>>> API
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+<!--      temp forms       -->
+<body class="container-fluid">
+      <form id="sign-up">
+        <fieldset>
+          <legend>Sign up!</legend>
+          <input type="text" name="credentials[email]" placeholder="email">
+          <input type="password" name="credentials[password]" placeholder="password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="password confirm">
+          <input type="submit" name="submit" value="Sign Up!">
+        </fieldset>
+      </form>
+      <form id="sign-in">
+        <legend>Sign in!</legend>
+        <fieldset>
+          <input type="text" name="credentials[email]" placeholder="email">
+          <input type="password" name="credentials[password]" placeholder="password">
+          <input type="submit" name="submit" value="Sign In!">
+        </fieldset>
+      </form>
+      <form id="sign-out">
+        <legend>Sign Out!</legend>
+        <fieldset>
+          <input type="submit" name="submit" value="Sign Out!">
+        </fieldset>
+      </form>
+      <form id="change-password">
+        <legend>Change Password</legend>
+        <fieldset>
+          <input type="password" name="passwords[old]" placeholder="old password">
+          <input type="password" name="passwords[new]" placeholder="new password">
+          <input type="submit" name="submit" value="change password!">
+        </fieldset>
+      </form>
+<!--     end temp forms       -->
+
     <h1>Cavemen vs. Aliens</h1>
     <div class="grid">
       <div class="cell">X</div>
