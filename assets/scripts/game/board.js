@@ -1,7 +1,5 @@
 'use strict';
 
-const board = ['','','','','','','','',''];
+let board = ['','','','','','','','',''];
 
-module.exports = {
-  board,
-};
+module.exports = board;

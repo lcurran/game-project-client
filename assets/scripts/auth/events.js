@@ -34,7 +34,7 @@ const onChangePassword = (event) => {
   api.changePassword(data)
     .done(ui.success)
     .fail(ui.failure);
-}
+};
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp);

@@ -1,13 +1,28 @@
 'use strict';
 
-const board = require('./board');
 const ui = require('./ui');
-const player = require('./player-move');
+let board = require('./board');
 
-const cellFiller = function (index) {
+let playerTurn = '';
+
+const player = () => {
+  if (playerTurn === '') {
+    playerTurn = 'O';
+    return 'X';
+  } else  if (playerTurn === 'X') {
+    playerTurn = 'O';
+    return 'X';
+  } else if (playerTurn === 'O') {
+    playerTurn = 'X';
+    return 'O';
+  }
+};
+
+const cellFiller = function (cellId) {
+  let index = cellId.replace(/\D/g,'');
   if (board[index] === '') {
     board[index] = player();
-    return board[index];
+    ui.placeMarker(cellId, index);
   } else {
     return ui.occupiedError;
   }

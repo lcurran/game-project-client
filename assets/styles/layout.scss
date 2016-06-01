@@ -2,6 +2,11 @@ body {
   box-sizing: border-box;
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
 
 body,
 html {
@@ -16,11 +21,11 @@ html {
 }
 
 .grid {
+  @extend .container;
   @include make-row();
   margin: auto;
   margin-top: 10vh;
   max-width: 450px;
-  @extend .container;
 
   .cell {
     @include make-xs-column(4);

@@ -1,7 +1,7 @@
 'use strict';
 
 const authEvents = require('./auth/events.js');
-const boardEvents = require('./logic/events.js');
+const boardEvents = require('./game/events.js');
 
 // On document ready
 $(() => {
