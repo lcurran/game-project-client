@@ -31,10 +31,20 @@ const boardClear = () => {
   $(".o").hide();
 };
 
+const success = (data) => {
+  console.log(data);
+};
+
+const failure = (error) => {
+  console.error(error);
+};
+
 module.exports = {
   occupiedError,
   placeMarker,
   playerWin,
   boardClear,
   tieAlert,
+  success,
+  failure,
 };
