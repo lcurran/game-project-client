@@ -1,6 +1,7 @@
 'use strict';
 // const board = require('./board');
 const filler = require('./board-filler');
+const ui = require('./ui');
 
 
 const onCellSelect = (event) => {
@@ -13,6 +14,8 @@ const onCellSelect = (event) => {
 
 const gameHandlers = () => {
   $('.grid').on('click', onCellSelect);
+  $('.x').on('click', ui.occupiedError);
+  $('.o').on('click', ui.occupiedError);
 };
 
 module.exports = {

@@ -20,13 +20,10 @@ const player = () => {
 
 const cellFiller = function (cellId) {
   let index = cellId.replace(/\D/g,'');
-  if (board[index] === '') {
-    board[index] = player();
-    ui.placeMarker(cellId, index);
-  } else {
-    return ui.occupiedError;
-  }
+      board[index] = player();
+      ui.placeMarker(cellId, index);
 };
+
 
 module.exports = {
   cellFiller,
