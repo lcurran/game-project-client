@@ -14,6 +14,7 @@ const onCellSelect = (event) => {
   win.winChecker(board);
   tie.tieChecker(board);
 
+
   // api.updateGame();
 
 };

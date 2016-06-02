@@ -31,16 +31,10 @@ const boardClear = () => {
   $(".o").hide();
 };
 
-
-  // const uiHandlers = () => {
-  //   $('#sign-up').blur().collapse('hide');
-  // };
-
 module.exports = {
   occupiedError,
   placeMarker,
   playerWin,
   boardClear,
   tieAlert,
-  // uiHandlers,
 };
