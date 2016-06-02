@@ -7,14 +7,30 @@ const occupiedError = () => {
 };
 
 const placeMarker = (cellId, index) => {
-    console.log(cellId);
-    console.log(board[index]);
     if (board[index] === 'X') {
       $('#' + cellId).find(".x").show(500);
     } else if (board[index] === 'O') {
         $('#' + cellId).find(".o").show(500);
     }
   };
+
+const playerWin = (winner) => {
+  if (winner === 'X') {
+      $('#win-x-modal').modal('show');
+  } else if (winner === 'O') {
+      $('#win-o-modal').modal('show');
+  }
+};
+
+const tieAlert = () => {
+  $('#tie-modal').modal('show');
+};
+
+const boardClear = () => {
+  $(".x").hide();
+  $(".o").hide();
+};
+
 
   // const uiHandlers = () => {
   //   $('#sign-up').blur().collapse('hide');
@@ -23,5 +39,8 @@ const placeMarker = (cellId, index) => {
 module.exports = {
   occupiedError,
   placeMarker,
+  playerWin,
+  boardClear,
+  tieAlert,
   // uiHandlers,
 };

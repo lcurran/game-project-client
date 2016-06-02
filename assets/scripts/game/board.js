@@ -1,5 +1,5 @@
 'use strict';
 
-let board = ['','','','','','','','',''];
+let board = ['', '', '', '', '', '', '', '', ''];
 
 module.exports = board;

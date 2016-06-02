@@ -8,5 +8,5 @@ const boardEvents = require('./game/events.js');
 $(() => {
   authEvents.addHandlers();
   boardEvents.gameHandlers();
-  uiEvents.uiHandlers();
+  // uiEvents.uiHa1ndlers();
 });
