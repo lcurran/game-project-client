@@ -84,6 +84,7 @@
     </div>
 
 <!-- begin modal section -->
+    <!-- cell occupied error modal -->
     <div id="occupied-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="invalidSpaceError">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -100,7 +101,57 @@
         </div><!-- /.modal-content -->
       </div>
     </div>
-
+    <!-- X win modal -->
+    <div id="win-x-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="invalidSpaceError">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Game over man, game over</h4>
+          </div>
+          <div class="modal-body">
+            <p>The Cavemen have defeated the Aliens!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- O win modal -->
+    <div id="win-o-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="invalidSpaceError">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Game over man, game over</h4>
+          </div>
+          <div class="modal-body">
+            <p>The Aliens have defeated the Cavemen!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- tie modal -->
+    <div id="tie-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="invalidSpaceError">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Game over man, game over</h4>
+          </div>
+          <div class="modal-body">
+            <p>They fought to a bloody draw!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 <!-- end modal section -->
   </body>
 </html>
