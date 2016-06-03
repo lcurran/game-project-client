@@ -61,11 +61,7 @@
       </form>
 <!--     end temp forms       -->
 <!-- temp buttons -->
-<div class="btn-group" role="group" aria-label="...">
-  <button id="create-online-game" type="button" class="btn btn-default">Make game</button>
-  <!-- <button type="button" class="btn btn-default">Middle</button>
-  <button type="button" class="btn btn-default">Right</button> -->
-</div>
+
 <!-- end temp buttons -->
 
     <h1>Cavemen vs. Aliens</h1>
@@ -89,6 +85,46 @@
       <div id="cell8" class="cell"><div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div><div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
       </div>
     </div>
+<!-- signed in functionality -->
+    <section class="container">
+      <article class="row">
+        <div class="btn-group col-md-6" role="group" aria-label="...">
+          <button id="create-online-game" type="button" class="btn btn-default">New Online Battle</button>
+          <button id="get-game-info" type="button" class="btn btn-default">GET debug button</button>
+          <button id="game-stats-search" type="button" class="btn btn-default">See Battle Stats</button>
+        </div>
+      </article>
+      <article class="row col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">Battle Statistics</div>
+            <table id="game-stats" class="table">
+              <tr><th>Battles Fought</th>
+              <td id="games-played"></td></tr>
+            </table>
+          </div>
+      </article>
+    </section>
+<!-- 2.0 functionality
+        <form class="input-group col-md-4">
+          <input type="text" class="form-control" placeholder="Game ID">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Load game</button>
+            </span>
+        </form>
+      </article>
+      <article class="row">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">Active Games</div>
+            <table id="search-results" class="table">
+              <tr>
+              <th>ID</th><th>Opponent</th>
+            </tr>
+
+            </table>
+          </div>
+      </article>
+    </section> -->
 
 <!-- begin modal section -->
     <!-- cell occupied error modal -->

@@ -3,13 +3,6 @@
 const api = require('./api');
 const ui = require('./ui');
 
-// var display2 = {};
-// display2["0"] = "none";
-// display2["1"] = "block";
-// display2["2"] = "none";
-//
-// console.log( JSON.stringify(display2) );
-
 const updateGameData = (board, index) => {
   let data = {
     game: {

@@ -4,7 +4,7 @@ const app = require('../app.js');
 
 const getGameInfo = () => {
   return $.ajax ({
-    url: app.host + '/games',
+    url: app.host + '/games/',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token

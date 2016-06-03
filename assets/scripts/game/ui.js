@@ -2,6 +2,7 @@
 
 let board = require('./board');
 const app = require('../app');
+// const stats = require('./statistics-filter');
 // const table = require('./build-table')
 
 const occupiedError = () => {
@@ -34,11 +35,12 @@ const boardClear = () => {
 };
 
 const success = (data) => {
-  console.log(data);
+  console.log(data.games.length);
 };
 
-const gameSearchSuccess = (data) => {
-
+const gameStatsSuccess = (data) => {
+  $("#games-played").text(data.games.length);
+  console.log(data.games.length);
 };
 
 const createGameSuccess = (data) => {
@@ -66,4 +68,5 @@ module.exports = {
   failure,
   createGameSuccess,
   updateGameSuccess,
+  gameStatsSuccess,
 };

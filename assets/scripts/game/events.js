@@ -14,11 +14,17 @@ const onCreateGame = () => {
   .fail(ui.failure);
 };
 
-const onGetGameInfo = () => {
+const onGet = () => {
   api.getGameInfo()
-  .done(ui.gameSearchSuccess)
+  .done(ui.success)
   .fail(ui.failure);
 };
+
+const onGameStats = () => {
+  api.getGameInfo()
+    .done(ui.gameStatsSuccess)
+    .fail(ui.failure);
+}
 
 
 
@@ -43,7 +49,8 @@ const gameHandlers = () => {
   $('#win-o-modal').on('hidden.bs.modal', ui.boardClear);
   $('#tie-modal').on('hidden.bs.modal', ui.boardClear);
   $('#create-online-game').on('click', onCreateGame);
-  $('#get-game-info').on('click', onGetGameInfo);
+  $('#get-game-info').on('click', onGet);
+  $('#game-stats-search').on('click', onGameStats);
 };
 
 module.exports = {
