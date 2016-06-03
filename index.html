@@ -21,80 +21,84 @@
           <ul class="nav navbar-nav navbar-right navbar-toggleable-*">
             <li><a role="button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sign-in" aria-hidden="true">Sign in</a></li>
             <li><a role="button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sign-up" aria-hidden="true">Sign up</a></li>
-            <li><a role="button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#change-password" aria-hidden="true">Change password</a></li>
-            <li><a role="button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sign-out" aria-hidden="true">Sign out</a></li>
+            <li><a role="button" class="navbar-toggler hidden" type="button" data-toggle="collapse" data-target="#change-password" aria-hidden="true">Change password</a></li>
+            <li><a id="sign-out" class="hidden" role="button" type="button">Sign out</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
 <!--      temp forms       -->
-      <form id="sign-up" class="collapse">
-        <fieldset>
-          <legend>Sign up!</legend>
-          <input type="text" name="credentials[email]" placeholder="username">
-          <input type="password" name="credentials[password]" placeholder="password">
-          <input type="password" name="credentials[password_confirmation]" placeholder="password confirm">
-          <input type="submit" name="submit" value="Sign Up!">
-        </fieldset>
-      </form>
-      <form id="sign-in" class="collapse">
-        <legend>Sign in!</legend>
-        <fieldset>
+      <section id="sign-up" class="collapse container">
+          <div class="form-group">
+            <input type="text" name="credentials[email]" placeholder="username">
+            <input type="password" name="credentials[password]" placeholder="password">
+            <input type="password" name="credentials[password_confirmation]" placeholder="password confirm">
+          </div>
+          <button type="submit" name="submit" class="btn btn-default">Sign up</button>
+      </section>
+      <section id="sign-in" class="collapse container">
+        <div class="form-group">
           <input type="text" name="credentials[email]" placeholder="email">
           <input type="password" name="credentials[password]" placeholder="password">
-          <input type="submit" name="submit" value="Sign In!">
-        </fieldset>
-      </form>
-      <form id="sign-out" class="collapse">
-        <legend>Sign Out!</legend>
-        <fieldset>
-          <input type="submit" name="submit" value="Sign Out!">
-        </fieldset>
-      </form>
-      <form id="change-password" class="collapse">
-        <legend>Change Password</legend>
-        <fieldset>
+        </div>
+          <button type="submit" name="submit" class="btn btn-default">Sign in</button>
+      </section>
+      <section id="change-password" class="collapse container">
+        <div class="form-group">
           <input type="password" name="passwords[old]" placeholder="old password">
           <input type="password" name="passwords[new]" placeholder="new password">
-          <input type="submit" name="submit" value="change password!">
-        </fieldset>
-      </form>
-<!--     end temp forms       -->
-<!-- temp buttons -->
-
-<!-- end temp buttons -->
-
+        </div>
+          <button type="submit" name="submit" class="btn btn-default">Change password</button>
+      </section>
+<!--     end forms       -->
     <h1>Cavemen vs. Aliens</h1>
     <div class="grid">
-      <div id="cell0" class="cell"><div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div><div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
+      <div id="cell0" class="cell">
+        <div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div>
+        <div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
       </div>
-      <div id="cell1" class="cell"><div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div><div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
+      <div id="cell1" class="cell">
+        <div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div>
+        <div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
       </div>
-      <div id="cell2" class="cell"><div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div><div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
+      <div id="cell2" class="cell">
+        <div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div>
+        <div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
       </div>
-      <div id="cell3" class="cell"><div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div><div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
+      <div id="cell3" class="cell">
+        <div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div>
+        <div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
       </div>
-      <div id="cell4" class="cell"><div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div><div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
+      <div id="cell4" class="cell">
+        <div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div>
+        <div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
       </div>
-      <div id="cell5" class="cell"><div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div><div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
+      <div id="cell5" class="cell">
+        <div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div>
+        <div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
       </div>
-      <div id="cell6" class="cell"><div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div><div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
+      <div id="cell6" class="cell">
+        <div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div>
+        <div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
       </div>
-      <div id="cell7" class="cell"><div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div><div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
+      <div id="cell7" class="cell">
+        <div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div>
+        <div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
       </div>
-      <div id="cell8" class="cell"><div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div><div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
+      <div id="cell8" class="cell">
+        <div class="x"><img src="./assets/styles/images/x-icon.png" alt="X"></div>
+        <div class="o"><img src="./assets/styles/images/ufo.png" alt="O"></div>
       </div>
     </div>
 <!-- signed in functionality -->
     <section class="container">
-      <article class="row">
-        <div class="btn-group col-md-6" role="group" aria-label="...">
+      <article id="signed-in-options" class="row">
+        <div class="btn-group" role="group" aria-label="...">
           <button id="create-online-game" type="button" class="btn btn-default">New Online Battle</button>
-          <button id="get-game-info" type="button" class="btn btn-default">GET debug button</button>
           <button id="game-stats-search" type="button" class="btn btn-default">See Battle Stats</button>
         </div>
       </article>
-      <article class="row col-md-6">
+      <article id="search-results" class="row">
         <div class="panel panel-default">
           <div class="panel-heading">Battle Statistics</div>
             <table id="game-stats" class="table">
@@ -195,6 +199,16 @@
         </div>
       </div>
     </div>
+
+    <!-- <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div> -->
+
+
 <!-- end modal section -->
   </body>
 </html>

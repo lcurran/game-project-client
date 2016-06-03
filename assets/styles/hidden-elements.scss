@@ -1,13 +1,7 @@
-.x {
+.x,
+.o,
+#search-results,
+#signed-in-options {
   border: 0;
-  display: none;
-}
-
-.o {
-  border: 0;
-  display: none;
-}
-
-#search-results {
   display: none;
 }
