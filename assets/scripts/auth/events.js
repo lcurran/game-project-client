@@ -24,9 +24,11 @@ const onSignIn = function (event) {
 const onSignOut = (event) => {
   event.preventDefault();
   ui.navFormCollapse();
+  if (app.user !== undefined) {
   api.signOut()
   .done(ui.signOutSuccess)
   .fail(ui.failure);
+}
 };
 
 const onChangePassword = (event) => {

@@ -46,6 +46,9 @@ const signInFail = () => {
 
 const signOutSuccess = () => {
   app.user = null;
+  $('#success-modal').modal('show');
+  navFormCollapse();
+  $('#success-modal').find('.modal-body p').text('You have been signed out.');
   console.log(app);
 };
 
@@ -67,6 +70,7 @@ const authUiHandlers = () => {
   $('#sign-up-nav').on('click', navFormCollapse);
   $('#change-password-nav').on('click', navFormCollapse);
   };
+
 
 module.exports = {
   failure,

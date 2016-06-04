@@ -19,7 +19,7 @@ const updateGameData = (board, index) => {
   .fail(ui.failure);
 };
 
-const endGameData = (board, index) => {  
+const endGameData = (board, index) => {
   let data = {
     game: {
       cell: {

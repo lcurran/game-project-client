@@ -10,7 +10,7 @@ let app = require('../app');
 const end = require('./end-game');
 
 const onCreateGame = () => {
-  if (app.user === undefined) {
+  if (app.user === undefined || app.user === null) {
     $('#sign-in-prompt-modal').modal('show');
   } else {
   end.boardReset();
@@ -23,7 +23,7 @@ const onCreateGame = () => {
 const onGameEnd = () => {
   end.boardReset();
   ui.boardClear();
-  if (app.user !== undefined) {
+  if (app.user !== undefined || app.user !== null) {
   api.createGame()
   .done(ui.createGameSuccess)
   .fail(ui.failure);
@@ -37,7 +37,7 @@ const onGameEnd = () => {
 // };
 
 const onGameStats = () => {
-  if (app.user === undefined) {
+  if (app.user === undefined || app.user === null) {
     $('#sign-in-prompt-modal').modal('show');
   } else {
   api.getGameInfo()
@@ -56,7 +56,7 @@ const onCellSelect = (event) => {
   filler.cellFiller(cellId, index);
   win.winChecker(board);
   tie.tieChecker(board);
-  if ((win.winChecker(board) !== undefined || tie.tieChecker(board) !== undefined) && app.user !== undefined) {
+  if ((win.winChecker(board) !== undefined || tie.tieChecker(board) !== undefined) && (app.user !== undefined)) {
     update.updateGameData(board, index);
   } else if (app.user !== undefined) {
     update.endGameData(board, index);
