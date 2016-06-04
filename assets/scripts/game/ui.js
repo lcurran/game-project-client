@@ -58,9 +58,6 @@ const failure = (error) => {
   console.error(error);
 };
 
-const uiHandlers = () => {
-};
-
 module.exports = {
   occupiedError,
   placeMarker,

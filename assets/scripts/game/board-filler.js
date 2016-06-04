@@ -18,7 +18,7 @@ const player = () => {
   }
 };
 
-const cellFiller = function (index, cellId) {
+const cellFiller = function (cellId, index) {
       board[index] = player();
       ui.placeMarker(cellId, index);
 };

@@ -6,7 +6,7 @@ const ui = require('./ui');
 const boardSum = (board) => {
   let sum = 0;
   for (let i = 0, max = board.length; i < max; i++) {
-    if (board[i] === 'X' || board[i] === 'O') {
+    if (board[i] === 'x' || board[i] === 'o') {
         sum++;
     }
   }
