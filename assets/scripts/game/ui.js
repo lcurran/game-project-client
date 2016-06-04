@@ -39,6 +39,7 @@ const success = (data) => {
 };
 
 const gameStatsSuccess = (data) => {
+  $("#search-results").collapse('show');
   $("#games-played").text(data.games.length);
   console.log(data.games.length);
 };

@@ -35,8 +35,8 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-<!--      temp forms       -->
-      <section id="sign-up" class="collapse container">
+<!--      forms       -->
+      <section id="sign-up" class="nav-forms collapse container">
           <form class="form-group">
             <fieldset>
               <input type="text" name="credentials[email]" placeholder="username">
@@ -46,16 +46,17 @@
             </fieldset>
           </form>
       </section>
-      <section id="sign-in" class="collapse container">
+      <section id="sign-in" class="nav-forms collapse container">
         <form class="form-group">
           <fieldset>
             <input type="text" name="credentials[email]" placeholder="email">
             <input type="password" name="credentials[password]" placeholder="password">
             <input type="submit" name="submit" value="Sign in">
+            <p class="help-block">Sign in to start a new online game.</p>
           </fieldset>
         </form>
       </section>
-      <section id="change-password" class="collapse container">
+      <section id="change-password" class="nav-forms collapse container">
         <form class="form-group">
           <fieldset>
             <input type="password" name="passwords[old]" placeholder="old password">
@@ -112,7 +113,7 @@
           <button id="game-stats-search" type="button" class="btn btn-default">See Battle Stats</button>
         </div>
       </article>
-      <article id="search-results" class="row">
+      <article id="search-results" class="row collapse container$">
         <div class="panel panel-default">
           <div class="panel-heading">Battle Statistics</div>
             <table id="game-stats" class="table">
@@ -156,9 +157,6 @@
           <div class="modal-body">
             <p>That land has already been claimed by the enemy!</p>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
         </div><!-- /.modal-content -->
       </div>
     </div>
@@ -172,9 +170,6 @@
           </div>
           <div class="modal-body">
             <p>The Cavemen have defeated the Aliens!</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -190,9 +185,6 @@
           <div class="modal-body">
             <p>The Aliens have defeated the Cavemen!</p>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
         </div>
       </div>
     </div>
@@ -207,9 +199,6 @@
           <div class="modal-body">
             <p>They fought to a bloody draw!</p>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
         </div>
       </div>
     </div>
@@ -218,18 +207,53 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Signed in</h4>
+            <h4 class="modal-title">Success</h4>
           </div>
           <div class="modal-body">
             <p>You have been successfully signed in.</p>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="sign-in-prompt-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="signedIn">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Please sign in</h4>
+          </div>
+          <div class="modal-body">
+            <p>That functionality is only available if you are signed in.</p>
           </div>
         </div>
       </div>
     </div>
-
+    <div id="password-changed-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="signedIn">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Password changed</h4>
+          </div>
+          <div class="modal-body">
+            <p>You have successfully updated your password</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="error-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="signedIn">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-danger ">Error</h4>
+          </div>
+          <div class="modal-body">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">

@@ -10,10 +10,14 @@ let app = require('../app');
 const end = require('./end-game');
 
 const onCreateGame = () => {
+  if (app.user === undefined) {
+    $('#sign-in-prompt-modal').modal('show');
+  } else {
   end.boardReset();
   api.createGame()
   .done(ui.createGameSuccess)
   .fail(ui.failure);
+}
 };
 
 const onGameEnd = () => {
@@ -26,16 +30,20 @@ const onGameEnd = () => {
 }
 };
 
-const onGet = () => {
-  api.getGameInfo()
-  .done(ui.success)
-  .fail(ui.failure);
-};
+// const onGet = () => {
+//   api.getGameInfo()
+//   .done(ui.success)
+//   .fail(ui.failure);
+// };
 
 const onGameStats = () => {
+  if (app.user === undefined) {
+    $('#sign-in-prompt-modal').modal('show');
+  } else {
   api.getGameInfo()
     .done(ui.gameStatsSuccess)
     .fail(ui.failure);
+  }
 };
 
 
@@ -66,7 +74,7 @@ const gameHandlers = () => {
   // $('#tie-modal').on('hidden.bs.modal', ui.boardClear);
   $('#tie-modal').on('hidden.bs.modal', onGameEnd);
   $('#create-online-game').on('click', onCreateGame);
-  $('#get-game-info').on('click', onGet);
+  // $('#get-game-info').on('click', onGet);
   $('#game-stats-search').on('click', onGameStats);
   $('#signed-in-modal').on('hidden.bs.modal', onCreateGame);
 };
