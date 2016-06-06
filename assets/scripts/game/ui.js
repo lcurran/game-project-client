@@ -2,8 +2,7 @@
 
 let board = require('./board');
 const app = require('../app');
-// const stats = require('./statistics-filter');
-// const table = require('./build-table')
+const id = require('./id-filter');
 
 const occupiedError = () => {
   $('#occupied-modal').modal('show');
@@ -34,25 +33,27 @@ const boardClear = () => {
   $(".o").hide();
 };
 
-const success = (data) => {
-  console.log(data.games.length);
-};
+// const success = (data) => {
+//   console.log(data.games.length);
+// };
 
 const gameStatsSuccess = (data) => {
   $("#search-results").collapse('show');
   $("#games-played").text(data.games.length);
-  console.log(data.games.length);
+};
+
+const gameIdSuccess = (data) => {
+  $("#game-ids").collapse('show');
+  id.buildGamesTable(data);
 };
 
 const createGameSuccess = (data) => {
   app.game = data.game;
   boardClear();
-  console.log(app.game);
 };
 
 const updateGameSuccess = (data) => {
   app.game = data.game;
-  console.log(app.game);
 };
 
 const failure = (error) => {
@@ -65,9 +66,10 @@ module.exports = {
   playerWin,
   boardClear,
   tieAlert,
-  success,
+  // success,
   failure,
   createGameSuccess,
   updateGameSuccess,
   gameStatsSuccess,
+  gameIdSuccess,
 };

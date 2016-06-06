@@ -1,11 +1,18 @@
 body {
   text-align: center;
+  margin: 0;
+  padding: 0 !important;
+}
+
+.navbar-static-top {
+  background-color: $darker-white;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .navbar-custom {
-  background-color: $darker-white;
   text-align: right;
-  width: 100%;
   li a {
     color: $carbon-black;
   }

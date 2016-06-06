@@ -1,10 +1,10 @@
 'use strict';
 
 const app = require('../app.js');
-
-const success = (data) => {
-  console.log(data);
-};
+//
+// const success = (data) => {
+//   console.log(data);
+// };
 
 const failure = (error) => {
   console.error(error);
@@ -33,8 +33,12 @@ const signUpSuccess = () => {
 const signInSuccess = (data) => {
   app.user = data.user;
   $('#signed-in-modal').modal('show');
+  $('#change-password-nav').removeClass('hidden');
+  $('#sign-out').removeClass('hidden');
+  $('#search-buttons').removeClass('hidden');
+  $('#sign-in-nav').addClass('hidden');
+  $('#sign-up-nav').addClass('hidden');
   navFormCollapse();
-  console.log(data);
 };
 
 const signInFail = () => {
@@ -49,7 +53,12 @@ const signOutSuccess = () => {
   $('#success-modal').modal('show');
   navFormCollapse();
   $('#success-modal').find('.modal-body p').text('You have been signed out.');
-  console.log(app);
+  $('#change-password-nav').addClass('hidden');
+  $('#sign-out').addClass('hidden');
+  $('#search-buttons').addClass('hidden');
+  $('#sign-in-nav').removeClass('hidden');
+  $('#sign-up-nav').removeClass('hidden');
+  $('#search-results').collapse('hide');
 };
 
 const changePasswordSuccess = () => {
@@ -74,7 +83,7 @@ const authUiHandlers = () => {
 
 module.exports = {
   failure,
-  success,
+  // success,
   signInSuccess,
   signInFail,
   signOutSuccess,

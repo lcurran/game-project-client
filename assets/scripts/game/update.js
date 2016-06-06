@@ -13,7 +13,6 @@ const updateGameData = (board, index) => {
       over: false
     }
   };
-  console.log(data);
   api.updateGame(data)
   .done(ui.updateGameSuccess)
   .fail(ui.failure);
@@ -29,7 +28,6 @@ const endGameData = (board, index) => {
       over: true
     }
   };
-  console.log(data);
   api.updateGame(data)
   .done(ui.updateGameSuccess)
   .fail(ui.failure);

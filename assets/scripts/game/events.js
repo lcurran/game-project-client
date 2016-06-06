@@ -10,6 +10,7 @@ let app = require('../app');
 const end = require('./end-game');
 
 const onCreateGame = () => {
+  event.preventDefault();
   if (app.user === undefined || app.user === null) {
     $('#sign-in-prompt-modal').modal('show');
   } else {
@@ -21,6 +22,7 @@ const onCreateGame = () => {
 };
 
 const onGameEnd = () => {
+  event.preventDefault();
   end.boardReset();
   ui.boardClear();
   if (app.user !== undefined || app.user !== null) {
@@ -37,6 +39,7 @@ const onGameEnd = () => {
 // };
 
 const onGameStats = () => {
+  event.preventDefault();
   if (app.user === undefined || app.user === null) {
     $('#sign-in-prompt-modal').modal('show');
   } else {
@@ -45,8 +48,12 @@ const onGameStats = () => {
     .fail(ui.failure);
   }
 };
-
-
+//
+// const onGameIdSearch = () => {
+//   api.getGameInfo()
+//     .done(ui.gameIdSuccess)
+//     .fail(ui.failure);
+// };
 
 const onCellSelect = (event) => {
   event.preventDefault();
@@ -67,16 +74,14 @@ const gameHandlers = () => {
   $('.x').on('click', ui.occupiedError);
   $('.o').on('click', ui.occupiedError);
   $('.grid').on('click', onCellSelect);
-  // $('#win-x-modal').on('hidden.bs.modal', ui.boardClear);
   $('#win-x-modal').on('hidden.bs.modal', onGameEnd);
-  // $('#win-o-modal').on('hidden.bs.modal', ui.boardClear);
   $('#win-o-modal').on('hidden.bs.modal', onGameEnd);
-  // $('#tie-modal').on('hidden.bs.modal', ui.boardClear);
   $('#tie-modal').on('hidden.bs.modal', onGameEnd);
   $('#create-online-game').on('click', onCreateGame);
-  // $('#get-game-info').on('click', onGet);
   $('#game-stats-search').on('click', onGameStats);
   $('#signed-in-modal').on('hidden.bs.modal', onCreateGame);
+  // $('#game-id-search').on('click', onGameIdSearch);
+
 };
 
 module.exports = {
