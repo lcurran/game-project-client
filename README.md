@@ -3,11 +3,12 @@
 [Cavemen vs. Aliens Tic Tac Toe](http://lcurran.github.io/game-project-client)
 
 ##Technologies used:
-  -Bootstrap 3.0
-  -JavaScript
-  -HTML5
-  -SASS/CSS
-  -Google. A lot of Google.
+
+-   Bootstrap 3.0
+-   JavaScript
+-   HTML5
+-   SASS/CSS
+-   Google. A lot of Google.
 
 ##Planning process:
 
@@ -55,13 +56,13 @@
 
   Files:
 
-  -HTML
-  -CSS
-  -Gameboard arrays
-  -Actions
-  -API calls
-  -UI elements
-  -Win conditions
+-   HTML
+-   CSS
+-   Gameboard arrays
+-   Actions
+-   API calls
+-   UI elements
+-   Win conditions
 
   May end up discovering further compartmentalization is needed, but to begin to
   build this should do.
@@ -107,8 +108,9 @@ to list active games and load a previously saved game, but did not have time
 to get it functional for the presentation build.
 
 In future iterations, I would like to:
-  -Fix console token errors when user is playing while not logged in.
-  -Add functionality to load saved games.
-  -Add online multiplayer.
-  -Add AI for the user to play against.
-  -Allow user to play on any size game board.
+
+-   Fix console token errors when user is playing while not logged in.
+-   Add functionality to load saved games.
+-   Add online multiplayer.
+-   Add AI for the user to play against.
+-   Allow user to play on any size game board.
