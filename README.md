@@ -112,3 +112,5 @@ In future iterations, I would like to:
   -Add online multiplayer.
   -Add AI for the user to play against.
   -Allow user to play on any size game board.
+
+  ####Lindsey Curran
